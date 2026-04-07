@@ -1,93 +1,61 @@
+/* Institutional Theme: Obsidian & Sovereign Gold */
 :root {
-  --bg: #050608;
-  --card: #101218;
-  --accent: #f5c451;
-  --accent-soft: rgba(245,196,81,0.12);
-  --text: #f5f5f5;
-  --muted: #a0a4b3;
-  --border: #262938;
-  --radius: 10px;
-  --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --obsidian: #000000;
+  --gold: #D4AF37;
+  --clarity-white: #FFFFFF;
+  --soft-gray: #1A1A1A;
 }
 
 body {
+  background-color: var(--obsidian);
+  color: var(--clarity-white);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
   margin: 0;
-  background: radial-gradient(circle at top, #151827 0, #050608 55%);
-  color: var(--text);
-  font-family: var(--font);
+  padding: 20px;
 }
 
-.app {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 24px 16px 48px;
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .card {
-  background: linear-gradient(135deg, #101218, #090b10);
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  padding: 16px;
-  margin-bottom: 14px;
-}
-
-.field {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-}
-
-input, select {
-  background: #05060a;
-  border-radius: 7px;
-  border: 1px solid var(--border);
-  padding: 8px 10px;
-  color: var(--text);
+  background: var(--soft-gray);
+  border: 1px solid var(--gold);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 4px;
 }
 
 .primary-button {
-  background: var(--accent);
-  border-radius: 999px;
-  padding: 8px 16px;
+  background-color: var(--gold);
+  color: var(--obsidian);
   border: none;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
   cursor: pointer;
-}
-
-.ghost-button {
-  border: 1px solid var(--border);
-  background: none;
-  color: var(--muted);
-  border-radius: 999px;
-  padding: 6px 12px;
-  cursor: pointer;
-}
-
-.pill-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 8px;
+  width: 100%;
 }
 
 .pill {
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 6px 10px;
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 0.5rem 1rem;
+  margin: 5px;
   cursor: pointer;
-  background: #05060a;
-  color: var(--muted);
 }
 
-.pill.selected {
-  border-color: var(--accent);
-  background: var(--accent-soft);
-  color: var(--accent);
+.pill.active {
+  background: var(--gold);
+  color: var(--obsidian);
 }
 
-.checklist {
-  list-style: none;
-  padding-left: 0;
-}
-
-.hidden {
-  display: none;
-}
+.app-header { text-align: center; margin-bottom: 3rem; }
+.brand-logo { margin-bottom: 1rem; border-radius: 50%; border: 2px solid var(--gold); }
+.hidden { display: none; }
+.app-footer { text-align: center; font-size: 0.8rem; margin-top: 4rem; border-top: 1px solid var(--gold); padding-top: 2rem; }
