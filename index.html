@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ready‑Yet Digital Creator App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="app">
+    <header class="app-header">
+      <h1>Ready‑Yet Digital Creator App <span class="beta">Beta</span></h1>
+      <p class="subtitle">Compliance assistant · Digital creators · North America</p>
+    </header>
+
+    <section class="card">
+      <h2>1 · Your location</h2>
+      <p class="hint">Determines your registration requirements</p>
+
+      <label class="field">
+        <span>Country</span>
+        <select id="country">
+          <option value="">Select country...</option>
+          <option value="CA">Canada</option>
+          <option value="US">United States</option>
+        </select>
+      </label>
+
+      <label class="field">
+        <span>Province / State</span>
+        <select id="region" disabled>
+          <option value="">Select country first...</option>
+        </select>
+      </label>
+
+      <label class="field">
+        <span>City (optional)</span>
+        <input id="city" type="text" placeholder="e.g. Saskatoon" />
+      </label>
+    </section>
+
+    <section class="card">
+      <h2>2 · What do you create or sell?</h2>
+      <p class="hint">Select all that apply</p>
+      <div id="creator-types" class="pill-grid"></div>
+    </section>
+
+    <section class="card">
+      <h2>3 · Your AI API key</h2>
+      <p class="hint">Used only in your browser — never stored or sent to us</p>
+
+      <label class="field">
+        <span>API key</span>
+        <div class="api-key-wrapper">
+          <input id="apiKey" type="password" placeholder="sk-ant-... or sk-... or AIza..." />
+          <button id="toggleKey" type="button" class="ghost-button">show</button>
+        </div>
+      </label>
+
+      <label class="field">
+        <span>AI provider</span>
+        <select id="provider">
+          <option value="anthropic">Anthropic (Claude)</option>
+          <option value="openai">OpenAI</option>
+          <option value="gemini">Google Gemini</option>
+        </select>
+      </label>
+    </section>
+
+    <section class="card">
+      <div class="actions">
+        <button id="generate" type="button" class="primary-button">Generate compliance checklist</button>
+      </div>
+    </section>
+
+    <section id="results" class="card hidden">
+      <h2>✅ Compliance checklist</h2>
+      <p class="hint">Generated locally in your browser.</p>
+
+      <div id="summary"></div>
+
+      <h3>1 · Required registrations</h3>
+      <ul id="registrations" class="checklist"></ul>
+
+      <h3>2 · Thresholds & notes</h3>
+      <ul id="notes" class="checklist"></ul>
+
+      <h3>3 · Ready‑to‑Open checklist</h3>
+      <div id="readyChecklist"></div>
+
+      <h3>4 · Official links</h3>
+      <ul id="links" class="checklist"></ul>
+
+      <h3>5 · Disclaimer</h3>
+      <p class="disclaimer">
+        General guidance only. Always verify requirements with your local government.
+      </p>
+
+      <div class="actions">
+        <button type="button" class="ghost-button" onclick="window.print()">Print / Save as PDF</button>
+      </div>
+    </section>
+
+    <footer class="app-footer">
+      <p>Free public utility. Copy, fork, adapt.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
