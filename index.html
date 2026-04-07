@@ -2,21 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Ready‑Yet Digital Creator App</title>
+  <title>Ready-Yet? | Institutional Compliance Engine</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A zero-friction, privacy-first compliance roadmap for digital creators in Canada and the US. Powered by Archer Chain Analytics.">
+  <meta name="author" content="Neil Archer">
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <main class="app">
     <header class="app-header">
-      <h1>Ready‑Yet Digital Creator App <span class="beta">Beta</span></h1>
-      <p class="subtitle">Compliance assistant · Digital creators · North America</p>
+      <!-- Institutional Branding -->
+      <div class="brand-block">
+        <img src="./assets/branding/logo_primary.png" alt="ACA Logo" class="brand-logo" style="max-width: 120px;">
+      </div>
+      <h1>Ready-Yet? Digital Creator App <span class="beta">v1.0.0</span></h1>
+      <p class="subtitle">Compliance Roadmap • North America • Archer Chain Analytics</p>
     </header>
 
     <section class="card">
-      <h2>1 · Your location</h2>
-      <p class="hint">Determines your registration requirements</p>
+      <h2>1. Jurisdictional Identification</h2>
+      <p class="hint">Determines federal and regional registration requirements.</p>
 
       <label class="field">
         <span>Country</span>
@@ -35,31 +41,31 @@
       </label>
 
       <label class="field">
-        <span>City (optional)</span>
+        <span>City (Optional)</span>
         <input id="city" type="text" placeholder="e.g. Saskatoon" />
       </label>
     </section>
 
     <section class="card">
-      <h2>2 · What do you create or sell?</h2>
-      <p class="hint">Select all that apply</p>
+      <h2>2. Asset Specification</h2>
+      <p class="hint">Select creative or digital commercial outputs.</p>
       <div id="creator-types" class="pill-grid"></div>
     </section>
 
     <section class="card">
-      <h2>3 · Your AI API key</h2>
-      <p class="hint">Used only in your browser — never stored or sent to us</p>
+      <h2>3. Secure Local Intelligence</h2>
+      <p class="hint">Processing occurs locally in-browser. API keys are never stored or transmitted.</p>
 
       <label class="field">
-        <span>API key</span>
+        <span>Local API Key</span>
         <div class="api-key-wrapper">
           <input id="apiKey" type="password" placeholder="sk-ant-... or sk-... or AIza..." />
-          <button id="toggleKey" type="button" class="ghost-button">show</button>
+          <button id="toggleKey" type="button" class="ghost-button">Show</button>
         </div>
       </label>
 
       <label class="field">
-        <span>AI provider</span>
+        <span>AI Provider Interface</span>
         <select id="provider">
           <option value="anthropic">Anthropic (Claude)</option>
           <option value="openai">OpenAI</option>
@@ -70,40 +76,41 @@
 
     <section class="card">
       <div class="actions">
-        <button id="generate" type="button" class="primary-button">Generate compliance checklist</button>
+        <button id="generate" type="button" class="primary-button">Generate Compliance Roadmap</button>
       </div>
     </section>
 
     <section id="results" class="card hidden">
-      <h2>✅ Compliance checklist</h2>
-      <p class="hint">Generated locally in your browser.</p>
+      <h2>Verified Compliance Checklist</h2>
+      <p class="hint">Locally generated roadmap for jurisdictional readiness.</p>
 
       <div id="summary"></div>
 
-      <h3>1 · Required registrations</h3>
+      <h3>1. Required Registrations</h3>
       <ul id="registrations" class="checklist"></ul>
 
-      <h3>2 · Thresholds & notes</h3>
+      <h3>2. Regulatory Thresholds & Notes</h3>
       <ul id="notes" class="checklist"></ul>
 
-      <h3>3 · Ready‑to‑Open checklist</h3>
+      <h3>3. Operational Readiness Checklist</h3>
       <div id="readyChecklist"></div>
 
-      <h3>4 · Official links</h3>
+      <h3>4. Primary Official Resources</h3>
       <ul id="links" class="checklist"></ul>
 
-      <h3>5 · Disclaimer</h3>
+      <h3>5. Legal Disclaimer</h3>
       <p class="disclaimer">
-        General guidance only. Always verify requirements with your local government.
+        Guidance is provided for informational purposes only. Institutional verification required via local government portals.
       </p>
 
       <div class="actions">
-        <button type="button" class="ghost-button" onclick="window.print()">Print / Save as PDF</button>
+        <button type="button" class="ghost-button" onclick="window.print()">Export to PDF</button>
       </div>
     </section>
 
     <footer class="app-footer">
-      <p>Free public utility. Copy, fork, adapt.</p>
+      <p><strong>INEXORABILIS</strong></p>
+      <p>A Public Utility for the Mahihkan Ecosystem • Sovereign. Precision. Technical Clarity.</p>
     </footer>
   </main>
 
